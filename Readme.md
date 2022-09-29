@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Александр Галимов](https://up.htmlacademy.ru/htmlcss/35/user/2057701).
-* Наставник: [Александр Румянцев](https://htmlacademy.ru/profile/id1521451)).
+* Наставник: [Александр Румянцев](https://htmlacademy.ru/profile/id1521451).
 
 ---
 
