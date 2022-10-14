@@ -14,6 +14,10 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
@@ -101,6 +105,10 @@ body {
 }
 
 /* Pages */
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
 
 .main-header {
   color: #000000;
@@ -109,7 +117,6 @@ body {
 
 .main-index {
   color: #000000;
-  background-color: #ffffff;
   background-image: url(../images/background/index-background.jpg);
     background-size: 100% auto;
   margin: 0 auto;
@@ -269,6 +276,16 @@ body {
 }
 
 /* Подвал */
+.page-footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1060px;
+  margin: 0 auto;
+  padding: 40px 70px 30px;
+  flex-direction: row;
+  align-items: center;
+}
+
 .footer-social-item {
   margin: 0;
   padding: 0;
@@ -297,7 +314,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-image: url(../images/background/view-mountain-sedona.png);
+  background-image: url(../images/background/view-mountain-sedona.jpeg);
   margin: 0 auto;
   background-repeat: no-repeat;
   color: #000000;
