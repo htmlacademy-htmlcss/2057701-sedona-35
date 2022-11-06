@@ -19,6 +19,17 @@
   box-sizing: border-box;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 html {
   height: 100%;
 }
@@ -37,15 +48,9 @@ body {
   min-height: 100%;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .button {
@@ -62,6 +67,7 @@ body {
   display: inline-block;
 }
 
+/* Навигация */
 .navigation {
   color: #000000;
   background-color: #FFFFFF;
@@ -1152,7 +1158,6 @@ body {
   line-height: 21px;
   color: #333333;
 }
-
 .rating {
   margin: 0;
   padding: 0;
