@@ -90,6 +90,16 @@ img {
   max-height: 64px;
 }
 
+.navigation-logo:hover,
+.navigation-logo:focus {
+  background-color: #82B3D3;
+  outline: none;
+}
+
+.navigation-logo:active {
+  background-color: #68A2CA;
+}
+
 .navigation-list {
   margin: 0;
   margin-left: 28px;
@@ -121,6 +131,18 @@ img {
   height: 2px;
   background-color: #756257;
   content: "";
+}
+
+.navigation-link:hover,
+.navigation-link:focus {
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  outline: none;
+}
+
+.navigation-link:active {
+  background: #68A2CA;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .navigation-list-right {
@@ -155,6 +177,16 @@ img {
   text-decoration: none;
   text-transform: capitalize;
   position: relative;
+}
+
+.navigation-user:hover,
+.navigation-user:focus {
+  background-color: #82B3D3;
+  outline: none;
+}
+
+.navigation-user:active {
+  background: #68A2CA;
 }
 
 .button-navigation {
@@ -400,31 +432,14 @@ img {
   align-items: center;
 }
 
-.icon-house {
-  background-image: url(../images/icons/housing.svg);
-  background-size: 76px 72px;
-  background-repeat: no-repeat;
-  background-position: center top 80px;
-}
-
-.icon-eating {
-  background-image: url(../images/icons/eating.svg);
-  background-size: 75px 70px;
-  background-repeat: no-repeat;
-  background-position: center top 81px;
-}
-
-.icon-souvenir {
-  background-image: url(../images/icons/souvenir.svg);
-  background-size: 65px 76px;
-  background-repeat: no-repeat;
-  background-position: center top 78px;
+.services-image {
+  padding-top: 80px;
 }
 
 .services-title {
   margin: 0;
   padding: 0;
-  margin-top: 182px;
+  margin-top: 30px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -503,7 +518,8 @@ img {
   flex-direction: column;
   align-items: center;
   color: #000000;
-  background-image: url(../images/background/view-sedona.png);
+  background-image: url(../images/background/view-sedona.jpg);
+  background-color: #ACAC69;
   margin: 0 auto;
   min-height: 414px;
   background-repeat: no-repeat;
@@ -665,6 +681,7 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
   background-image: url(../images/background/view-mountain-sedona.jpeg);
+  background-color: #333333;
   margin: 0 auto;
   background-repeat: no-repeat;
   background-size: cover;
@@ -969,6 +986,7 @@ img {
   right: 0;
 }
 
+/*кнопки фильтра*/
 .filter-buttons {
   margin: 0;
   padding: 0;
@@ -1035,12 +1053,6 @@ img {
   color: #000000;
 }
 
-.select-control {
-  font-size: 18px;
-  line-height: 21px;
-  color: #333333;
-}
-
 .select {
   position: relative;
   display: flex;
@@ -1049,8 +1061,16 @@ img {
   margin-right: auto;
 }
 
+.select-control {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
 /*список сортировки */
 .select-control {
+  color: #333333;
+  width: 292px;
   padding: 12px 20px;
   padding-right: 103px;
   font: inherit;
@@ -1061,6 +1081,7 @@ img {
   background-image: url(../images/icons/select-arrow.svg);
   background-repeat: no-repeat;
   background-position: right 16px center;
+  -webkit-appearance: none;
   appearance: none;
   border-radius: 4px;
 }
