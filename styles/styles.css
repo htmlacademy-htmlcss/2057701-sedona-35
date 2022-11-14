@@ -1444,39 +1444,39 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+  z-index: 2;
 }
 
-.modal-container-close {
-  display: none;
-}
-
-.modal-auth {
+.modal {
   position: relative;
-  width: 717px;
+  margin: auto;
   padding: 64px 70px;
-  background-color: #ffffff;
-  border-radius: 30px;
+  background-color: #FFFFFF;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+.modal-search-hotel {
+  width: 577px;
 }
 
 .modal-close-button {
   position: absolute;
+  padding: 0;
+  top: 64px;
   right: 52px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 52px;
-  height: 52px;
-  background-color: #f2f2f2;
-  border: none;
+  width: 53px;
+  height: 53px;
   border-radius: 50%;
+  background-color: #F2F2F2;
+  border: none;
+  background-image: url("../images/icons/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .modal-close-button:hover {
@@ -1495,277 +1495,268 @@ img {
   }
 }
 
-.modal-close-button:active svg {
-  opacity: 0.3;
+.modal-close-button:active {
+  background-image: url("../images/icons/cross-active.svg");
 }
 
-.modal-content-title {
-  margin: 0 50px 64px 0;
-  font-weight: 700;
+.modal-title {
+  margin: 0;
+  margin-bottom: 64px;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 30px;
   line-height: 36px;
+  font-weight: 700;
   color: #000000;
   text-transform: uppercase;
 }
 
-.modal-content-container {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 48px;
-}
-
-.modal-content-container:not(.no-calendar)::after {
-  content: url("../images/icons/calendar.svg");
-  position: absolute;
-  top: 50%;
-  right: 22px;
-  transform: translateY(-50%);
-  opacity: 0.3;
-}
-
-.modal-content-label {
-  display: block;
-  width: 137px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  color: #000000;
-  text-transform: capitalize;
-}
-
-.modal-content-input {
-  width: calc(100% - 137px);
-  min-height: 48px;
-  padding-right: 50px;
-  padding-left: 20px;
-  font: inherit;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: left;
-  color: #000000;
-  background-color: #f2f2f2;
-  border: none;
-  border-radius: 4px;
-}
-
-.modal-content-input::placeholder {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.modal-content-message {
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 157px;
-  font-size: 16px;
-}
-
-.error-message {
-  color: #ff5757;
-}
-
-.error-message-hide .error-message {
-  display: none;
-}
-
-.info-message-hide .info-message {
-  display: none;
-}
-
-.modal-content-input:hover {
-  background-color: #e6e6e6;
-}
-
-.modal-content-input:focus {
-  background-color: #e6e6e6;
-  outline: 3px solid #83b3d3;
-}
-
-.modal-content-input:active {
-  background-color: #f2f2f2;
-  outline: 2px solid #000000;
-}
-
-.modal-content-container-guests {
-  display: flex;
-  align-items: center;
-}
-
-.modal-content-container-kids {
-  width: 242px;
-}
-
-.modal-content-container-kids .modal-content-label {
-  width: auto;
+.field-group {
+  margin: 0;
   padding: 0;
 }
 
-.modal-content-container-value {
+.modal-form .field-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.field-group-people {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field-group-adults {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 247px;
   position: relative;
+}
+
+.field-group-children {
+  display: flex;
+  align-items: center;
+  width: 242px;
+  position: relative;
+}
+
+.text-modal {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.modal-date-field {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  width: 400px;
   margin-left: auto;
+  padding: 12px 20px;
+  background: #F2F2F2;
+  border-radius: 4px;
+  border: none;
+  background-image: url("../images/icons/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: center right 20px;
 }
 
-.modal-content-input-value {
-  display: block;
-  width: 110px;
-  padding-right: 40px;
-  padding-left: 40px;
-  text-align: center;
+.modal-date-field:hover {
+  background-color: #E6E6E6;
 }
 
-.modal-content-value-button {
+.modal-date-field:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.text-modal-item {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 4px auto 23px 157px;
+}
+
+.status-error {
+  color: #FF5757;
+}
+
+.modal-people {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  width: 11px;
+  padding: 12px 50px;
+  margin-left: auto;
+  background: #F2F2F2;
+  border-radius: 4px;
+  border: none;
+}
+
+.modal-people:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-people:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.button-modal {
   position: absolute;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20px;
   height: 20px;
-  padding: 0;
-  background-color: transparent;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
+  background-color: transparent;
 }
 
-.value-down {
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
+.button-minus {
+  top: 14px;
+  left: 147px;
 }
 
-.value-up {
-  top: 50%;
-  right: -10px;
-  transform: translateX(-100%) translateY(-50%);
+.button-minus-children {
+  top: 14px;
+  right: 81px;
 }
 
-.modal-content-value-button:hover svg {
+.button-modal:hover .button-condition,
+.button-modal:focus .button-condition {
   fill: #000000;
   fill-opacity: 1;
 }
 
-.modal-content-value-button:focus {
-  outline: none;
-}
-
-.modal-content-value-button:focus-visible {
-  outline: 3px solid #82b3d3;
-  fill: #000000;
-  fill-opacity: 1;
+.button-modal:focus-visible {
+  outline: 3px solid #83B3D3;
+  border-radius: 3px;
 }
 
 @supports not selector(:focus-visible) {
-  .modal-content-value-button:focus {
-    outline: 3px solid #82b3d3;
-    fill: #000000;
-    fill-opacity: 1;
+  .button-modal:focus {
+    outline: 3px solid #83B3D3;
+    border-radius: 3px;
   }
 }
 
-.modal-content-value-button:active svg {
-  fill-opacity: 0.2;
+.button-modal:active .button-condition {
+  fill: #756157;
+  fill-opacity: 0.3;
 }
 
-.modal-content-find-button {
+.button-plus {
+  top: 14px;
+  left: 218px;
+}
+
+.button-plus-children {
+  top: 14px;
+  right: 10px;
+}
+
+/*тултип*/
+.tooltip {
+  position: absolute;
+  margin-left: 59px;
+  width: 26px;
+  height: 26px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
   display: block;
+  cursor: pointer;
+}
+
+.tooltip-icon {
   width: 100%;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  height: 100%;
+  color: #242424;
+  display: block;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: none;
+  padding: 16px 20px;
+  width: 216px;
+  position: absolute;
+  top: 100%;
+  margin-top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.form-label-icon {
+  position: relative;
+  padding-right: 16px;
+}
+
+.tooltip-text::after {
+  content: "";
+  background-image: url("../images/icons/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-find {
+  margin-top: 48px;
+  padding: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  color: #ffffff;
+  width: 577px;
+  height: 60px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  border-radius: 10px;
   text-transform: uppercase;
-  background-color: #83b3d3;
-  border: none;
-  border-radius: 10px;
   cursor: pointer;
-}
-
-.modal-content-find-button:hover {
-  background-color: #68a2ca;
-}
-
-.modal-content-find-button:focus-visible {
-  background-color: #68a2ca;
-}
-
-@supports not selector(:focus-visible) {
-  .modal-content-find-button:focus {
-    background-color: #68a2ca;
-  }
-}
-
-.modal-content-find-button:active {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.modal-content-tooltip {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.modal-content-tooltip-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 26px;
-  height: 26px;
-  background-color: #83b3d3;
   border: none;
-  border-radius: 50%;
-  cursor: pointer;
+  display: inline-block;
 }
 
-.modal-content-tooltip-button:focus-visible {
-  background-color: #68a2ca;
+.button-find:hover,
+.button-find:focus {
+  background-color: #68A2CA;
+  outline: none;
 }
 
-@supports not selector(:focus-visible) {
-  .modal-content-tooltip-button:focus {
-    background-color: #68a2ca;
-  }
+.button-find:active {
+  background-color: #68A2CA;
+  color: rgba(242, 242, 242, 0.3);
 }
 
-.modal-content-tooltip-button:hover + .modal-content-tooltip-text {
-  display: block;
-}
-
-.modal-content-tooltip-button:focus-visible + .modal-content-tooltip-text {
-  display: block;
-}
-
-@supports not selector(:focus-visible) {
-  .modal-content-tooltip-button:focus + .modal-content-tooltip-text {
-    display: block;
-  }
-}
-
-.modal-content-tooltip-text {
-  position: absolute;
-  z-index: 1;
+.modal-container-close {
   display: none;
-  min-width: 256px;
-  margin: 15px 0 0 13px;
-  padding: 15px 18px 18px 22px;
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
-  text-transform: none;
-  background-color: #333333;
-  border-radius: 10px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  transform: translateX(-50%);
-}
-
-.modal-content-tooltip-text::before {
-  content: "";
-  position: absolute;
-  top: -9px;
-  left: 50%;
-  width: 19px;
-  height: 9px;
-  background-image: url("../images/tooltip-arrow.svg");
-  transform: translateX(-50%);
 }
