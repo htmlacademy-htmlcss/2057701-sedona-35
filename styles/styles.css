@@ -90,14 +90,17 @@ img {
   max-height: 64px;
 }
 
-.navigation-logo:hover,
-.navigation-logo:focus {
-  background-color: #82B3D3;
-  outline: none;
+.navigation-logo:hover .page-header-logo {
+  opacity: 0.6;
 }
 
-.navigation-logo:active {
-  background-color: #68A2CA;
+.navigation-logo:focus-visible .page-header-logo {
+  outline: auto;
+  outline-color: #000000;
+}
+
+.navigation-logo:active .page-header-logo {
+  opacity: 0.3;
 }
 
 .navigation-list {
@@ -133,16 +136,22 @@ img {
   content: "";
 }
 
-.navigation-link:hover,
-.navigation-link:focus {
-  color: #FFFFFF;
-  background-color: #82B3D3;
-  outline: none;
+.navigation-link:hover {
+  opacity: 0.6;
+}
+
+.navigation-link:focus-visible {
+  outline-offset: -1px;
+}
+
+@supports not selector(:focus-visible) {
+  .navigation-link:focus {
+    outline-offset: -1px;
+  }
 }
 
 .navigation-link:active {
-  background: #68A2CA;
-  color: rgba(255, 255, 255, 0.3);
+  opacity: 0.3;
 }
 
 .navigation-list-right {
@@ -179,14 +188,22 @@ img {
   position: relative;
 }
 
-.navigation-user:hover,
-.navigation-user:focus {
-  background-color: #82B3D3;
-  outline: none;
+.navigation-user:hover {
+  opacity: 0.6;
+}
+
+.navigation-user:focus-visible {
+  outline-offset: -1px;
+}
+
+@supports not selector(:focus-visible) {
+  .navigation-user:focus {
+    outline-offset: -1px;
+  }
 }
 
 .navigation-user:active {
-  background: #68A2CA;
+  opacity: 0.3;
 }
 
 .button-navigation {
@@ -227,20 +244,15 @@ img {
 }
 
 /* Pages */
-.main-container {
-  width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  flex-grow: 1;
-  background-color: #FFFFFF;
-  color: #000000;
-}
-
 .page-container {
-  max-width: 1200px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 1200px;
+  min-height: 100vh;
   margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-header {
@@ -519,7 +531,7 @@ img {
   align-items: center;
   color: #000000;
   background-image: url(../images/background/view-sedona.jpg);
-  background-color: #ACAC69;
+  background-color: #83cdff;
   margin: 0 auto;
   min-height: 414px;
   background-repeat: no-repeat;
@@ -562,6 +574,28 @@ img {
   width: 432px;
   height: 52px;
   border-radius: 4px 0 0 4px;
+}
+
+.field-email::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.field-email:hover {
+  background-color: #e6e6e6;
+}
+
+.field-email:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+@supports not selector(:focus-visible) {
+  .field-email:focus {
+    outline: 3px solid #83b3d3;
+  }
+}
+
+.field-email:active {
+  outline: 2px solid #000000;
 }
 
 .button-subscribe {
@@ -1404,4 +1438,325 @@ img {
 
 .color-black {
   color: #000000;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+  z-index: 2;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #FFFFFF;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+.modal-search-hotel {
+  width: 577px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 64px;
+  right: 52px;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  background-color: #F2F2F2;
+  border: none;
+  background-image: url("../images/icons/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+@supports not selector(:focus-visible) {
+  .modal-close-button:focus {
+    background-color: #e6e6e6;
+    outline: 3px solid #83b3d3;
+  }
+}
+
+.modal-close-button:active {
+  background-image: url("../images/icons/cross-active.svg");
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 64px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.field-group {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-form .field-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.field-group-people {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field-group-adults {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 247px;
+  position: relative;
+}
+
+.field-group-children {
+  display: flex;
+  align-items: center;
+  width: 242px;
+  position: relative;
+}
+
+.text-modal {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.modal-date-field {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  width: 400px;
+  margin-left: auto;
+  padding: 12px 20px;
+  background: #F2F2F2;
+  border-radius: 4px;
+  border: none;
+  background-image: url("../images/icons/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: center right 20px;
+}
+
+.modal-date-field:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-date-field:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.text-modal-item {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 4px auto 23px 157px;
+}
+
+.status-error {
+  color: #FF5757;
+}
+
+.modal-people {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  width: 11px;
+  padding: 12px 50px;
+  margin-left: auto;
+  background: #F2F2F2;
+  border-radius: 4px;
+  border: none;
+}
+
+.modal-people:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-people:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.button-modal {
+  position: absolute;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.button-minus {
+  top: 14px;
+  left: 147px;
+}
+
+.button-minus-children {
+  top: 14px;
+  right: 81px;
+}
+
+.button-modal:hover .button-condition,
+.button-modal:focus .button-condition {
+  fill: #000000;
+  fill-opacity: 1;
+}
+
+.button-modal:focus-visible {
+  outline: 3px solid #83B3D3;
+  border-radius: 3px;
+}
+
+@supports not selector(:focus-visible) {
+  .button-modal:focus {
+    outline: 3px solid #83B3D3;
+    border-radius: 3px;
+  }
+}
+
+.button-modal:active .button-condition {
+  fill: #756157;
+  fill-opacity: 0.3;
+}
+
+.button-plus {
+  top: 14px;
+  left: 218px;
+}
+
+.button-plus-children {
+  top: 14px;
+  right: 10px;
+}
+
+/*тултип*/
+.tooltip {
+  position: absolute;
+  margin-left: 59px;
+  width: 26px;
+  height: 26px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+  cursor: pointer;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  color: #242424;
+  display: block;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: none;
+  padding: 16px 20px;
+  width: 216px;
+  position: absolute;
+  top: 100%;
+  margin-top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.form-label-icon {
+  position: relative;
+  padding-right: 16px;
+}
+
+.tooltip-text::after {
+  content: "";
+  background-image: url("../images/icons/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-find {
+  margin-top: 48px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  width: 577px;
+  height: 60px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+}
+
+.button-find:hover,
+.button-find:focus {
+  background-color: #68A2CA;
+  outline: none;
+}
+
+.button-find:active {
+  background-color: #68A2CA;
+  color: rgba(242, 242, 242, 0.3);
+}
+
+.modal-container-close {
+  display: none;
 }
