@@ -124,6 +124,7 @@ img {
   text-decoration: none;
   text-transform: capitalize;
   position: relative;
+  max-width: 115px;
 }
 
 .navigation-link-current::before {
@@ -291,13 +292,13 @@ img {
 }
 
 .page-start-text {
-  margin-top: 69px;
+  padding: 69px 274px 90px;
   display: block;
   text-align: center;
 }
 
 .start-title {
-  margin: 0;
+  margin: 0 0 25px 0;
   padding: 0;
   font-weight: 700;
   font-size: 30px;
@@ -308,8 +309,6 @@ img {
 .start-description {
   margin: 0;
   padding: 0;
-  margin-top: 25px;
-  margin-bottom: 90px;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -331,12 +330,22 @@ img {
   padding: 0;
   width: calc(100%/3);
   min-height: 384px;
+  min-width: 400px;
   background-color: #82B3D3;
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+}
+
+.advantages-image {
+  height: auto;
+  object-fit: cover;
+}
+
+.advantages-card {
+  display: flex;
 }
 
 .advantages-title-white {
@@ -504,13 +513,14 @@ img {
 .button-search-container {
   margin: 0;
   padding: 0;
-  margin-top: 62px;
-  margin-bottom: 104px;
+  margin-top: 54px;
+  margin-bottom: 96px;
   text-align: center;
 }
 
 .button-search-hotels {
   font-weight: 700;
+  display: inline-block;
   text-align: center;
   color: #FFFFFF;
   text-decoration: none;
@@ -519,9 +529,10 @@ img {
   border: none;
   font-size: 20px;
   line-height: 36px;
-  padding: 12px 50px;
+  padding: 8px 50px;
   background-color: #756157;
   border-radius: 4px;
+  width: 276px;
 }
 
 /*Подписка*/
@@ -533,14 +544,14 @@ img {
   background-image: url(../images/background/view-sedona.jpg);
   background-color: #83cdff;
   margin: 0 auto;
-  min-height: 414px;
   background-repeat: no-repeat;
+  background-size: cover;
+  padding: 96px 258px 104px
 }
 
 .subscribe-title {
   margin: 0;
   padding: 0;
-  margin-top: 96px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -635,6 +646,7 @@ img {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  min-width: 150px;
 }
 
 .footer-social-item {
@@ -675,19 +687,21 @@ img {
   height: 40px;
 }
 
-.footer-social-logo {
-  fill: #83B3D3;
+.footer-social-link:hover {
+  fill: #68a2ca;
 }
 
-.footer-social-link:hover .footer-social-logo {
-  fill: #68A2CA;
+.footer-social-link:focus-visible{
+  fill: #68a2ca;
 }
 
-.footer-social-link:focus .footer-social-logo {
-  fill: #68A2CA;
+@supports not selector(:focus-visible) {
+  .footer-social-link:focus {
+    fill: #68a2ca;
+  }
 }
 
-.footer-social-link:active .footer-social-logo {
+.footer-social-link:active {
   fill: rgba(104, 162, 202, 0.3);
 }
 
@@ -1165,9 +1179,16 @@ img {
   border-color: #000000;
 }
 
-.sorting-view-link:focus {
+.sorting-view-link:focus-visible {
   border: 2px solid #68A2CA;
   outline: none;
+}
+
+@supports not selector(:focus-visible) {
+  .sorting-view-link:focus-visible {
+    border-color: #68a2ca;
+    outline: none;
+  }
 }
 
 .sorting-view-link:active {

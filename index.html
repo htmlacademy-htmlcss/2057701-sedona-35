@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
+
   <body>
     <div class="page-container">
       <header class="main-header">
         <nav class="navigation">
           <a class="navigation-logo" href="index.html">
-            <img class="page-header-logo" src="images/header/logo-sedona.svg" width="140" height="70" alt="логотип седона.">
+            <img class="page-header-logo" src="images/header/logo-sedona.svg" width="140" height="70"
+              alt="логотип седона.">
           </a>
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -79,17 +82,16 @@
         <section class="advantages">
           <h2 class="visually-hidden">Преимущества.</h2>
           <ul class="advantages-list">
-            <li class="advantages-item">
-              <h3 class="advantages-title-white">Настоящий<br> городок</h3>
-              <p class="advantages-description-white">Седона — не аттракцион для<br> туристов, там течёт своя<br> жизнь
-              </p>
-            </li>
-            <li>
-              <div class="advantages-image-1">
-                <img class="advantages-image" src="images//main/city-sedona.jpeg" width="800" height="384"
-                  alt="здание цветы горы.">
-              </div>
-            </li>
+            <div class="advantages-card">
+              <li class="advantages-item">
+                <h3 class="advantages-title-white">Настоящий<br> городок</h3>
+                <p class="advantages-description-white">Седона — не аттракцион для<br> туристов, там течёт своя<br>
+                  жизнь
+                </p>
+              </li>
+              <img class="advantages-image" src="images//main/city-sedona.jpeg" width="800" height="384"
+                alt="здание цветы горы.">
+            </div>
             <!--Преимущество №2-->
             <li class="advantages-item color-lightblue">
               <h3 class="advantages-title-black">Небольшая<br> площадь</h3>
@@ -106,17 +108,15 @@
               <p class="advantages-description-black">Большинство едет в Гранд<br> Каньон и толпится там</p>
             </li>
             <!--Преимущество №5-->
-            <li>
-              <div class="advantages-image-2">
-                <img class="advantages-image" src="images//main/devil's-bridge.jpeg" width="800" height="384"
-                  alt="мост дьявола.">
-              </div>
-            </li>
-            <li class="advantages-item">
-              <h3 class="advantages-title-white">Там есть<br> мост дьявола</h3>
-              <p class="advantages-description-white">Да, по нему можно пройти!<br> Если вы осмелитесь,<br> разумеется
-              </p>
-            </li>
+            <div class="advantages-card">
+              <img class="advantages-image" src="images//main/devil's-bridge.jpeg" width="800" height="384"
+                alt="мост дьявола.">
+              <li class="advantages-item">
+                <h3 class="advantages-title-white">Там есть<br> мост дьявола</h3>
+                <p class="advantages-description-white">Да, по нему можно пройти!<br> Если вы осмелитесь,<br> разумеется
+                </p>
+              </li>
+            </div>
           </ul>
         </section>
         <!--Услуги-->
@@ -243,8 +243,8 @@
             <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
               <p class="field-group">
                 <label class="text-modal" for="arrival-form">Дата заезда:</label>
-                <input class="modal-date-field" id="arrival-form" type="text" name="arrival-form"
-                  value="27 апреля 2020" placeholder="Укажите дату" required>
+                <input class="modal-date-field" id="arrival-form" type="text" name="arrival-form" value="27 апреля 2020"
+                  placeholder="Укажите дату" required>
               </p>
               <p class="text-modal-item status-error">Мы не можем отправить вас в прошлое.</p>
               <p class="field-group">
@@ -308,4 +308,5 @@
       </div>
     </div>
   </body>
+
 </html>
