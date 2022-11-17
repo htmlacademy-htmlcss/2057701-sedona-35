@@ -346,6 +346,17 @@ img {
 
 .advantages-card {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  min-height: 384px;
+  text-align: center;
+  background-color: #82b3d3;
 }
 
 .advantages-title-white {
