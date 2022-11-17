@@ -596,7 +596,8 @@ img {
 }
 
 .field-email:focus-visible {
-  outline: 3px solid #83b3d3;
+  border-color: #000000;
+  outline: none;
 }
 
 @supports not selector(:focus-visible) {
@@ -627,31 +628,31 @@ img {
 }
 
 /* Подвал */
-.page-footer-container {
+.page-footer {
   display: flex;
   justify-content: space-between;
-  width: 1060px;
-  margin: 0 auto;
+  margin-top: auto;
   padding: 45px 70px 35px;
-  flex-direction: row;
-  align-items: center;
-  background-color: #FFFFFF;
 }
 
 .footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 142px;
+  min-width: 142px;
   margin: 0;
   padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  min-width: 150px;
+  list-style: none;
 }
 
-.footer-social-item {
-  margin: 0;
-  padding: 0;
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .footer-contacts-phone {
@@ -676,37 +677,30 @@ img {
   color: rgba(117, 97, 87, 0.3);
 }
 
-.footer-social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #FFFFFF;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 48px;
-  height: 40px;
-}
-
-.footer-social-link:hover {
+.footer-social-link:hover svg {
   fill: #68a2ca;
 }
 
-.footer-social-link:focus-visible{
+.footer-social-link:focus-visible svg {
   fill: #68a2ca;
 }
 
 @supports not selector(:focus-visible) {
-  .footer-social-link:focus {
+  .footer-social-link:focus svg {
     fill: #68a2ca;
   }
 }
 
-.footer-social-link:active {
+.footer-social-link:active svg {
   fill: rgba(104, 162, 202, 0.3);
 }
 
 .htmlacademy-icon {
   fill: #000000;
+}
+
+.logo-htmlacademy {
+  margin-top: 3px;
 }
 
 .footer-social-htmlacademy:hover .htmlacademy-icon {
@@ -970,6 +964,11 @@ img {
   background: #E6E6E6;
   outline: 3px solid #83B3D3;
   border: none;
+}
+
+.field-price:focus-visible {
+  border-color: #000000;
+  outline: none;
 }
 
 .field-price:active {
